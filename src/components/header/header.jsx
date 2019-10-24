@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import Nav from '../nav/nav';
+import Nav from './nav/nav';
 
 class Header extends Component {
 	render() {
