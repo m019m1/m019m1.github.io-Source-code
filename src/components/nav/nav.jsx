@@ -13,7 +13,7 @@ const Nav = () => {
 
 	return (
 		<nav>
-			<ul className='nav'>
+			<ul className='navMenu'>
 				{links.map( ({name, href}) => (
 					<li key={name}>
 						<NavLink exact to={href} >

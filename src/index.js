@@ -8,6 +8,7 @@ import Home from './components/home/home';
 import Works from './components/works/works';
 import Skills from './components/skills/skills';
 import Contacts from './components/contacts/contacts';
+import Error from './components/error/error';
 
 ReactDOM.render((
 	<BrowserRouter>
@@ -17,6 +18,7 @@ ReactDOM.render((
 				<Route path='/works' component={Works} />
 				<Route path='/skills' component={Skills} />
 				<Route path='/contacts' component={Contacts} />
+				<Route path='*' component={Error} />
 			</Switch>
 		</App>
 	</BrowserRouter>

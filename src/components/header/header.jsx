@@ -1,15 +1,14 @@
 import React, { Component, Fragment } from 'react';
-import Nav from './nav/nav';
+import './header.css';
 
 class Header extends Component {
 	render() {
 
 		return (
-			<Fragment>
+			<div className='wrapper'>
 				<h1>Yaroslav Polyanskiy</h1>
-				<h3>JavaScript Developer</h3>
-				<Nav/>
-			</Fragment>
+				<h2>Frontend Developer</h2>
+			</div>
 		)
 	}
 }
