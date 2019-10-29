@@ -1,0 +1,15 @@
+.home * {
+	color: white;
+}
+.home {
+	margin-top: 50px;
+}
+.myPhoto {
+	width: 400px;
+	float: right;
+	border-radius: 5%;
+}
+.about {
+	font-size: 1.5em;
+	text-indent: 1em;
+}

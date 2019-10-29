@@ -1,5 +1,5 @@
 nav {
-	background-color: rgba(100, 100, 100, 0.5);
+	/* background-color: rgba(100, 100, 100, 0.5); */
 }
 .navMenu {
 	width: 500px;
@@ -10,11 +10,11 @@ nav {
 	/* align-items: center; */
 	/* align-content: flex-end; */
 	justify-content: space-evenly;
+	font-size: 2em;
 }
 .navMenu a {
-	color: black;
+	color: white;
 }
 .navMenu a:hover, .navMenu a.active {
-	color: black;
-	background-color: rgba(100, 100, 100, 0.5);;
+	color: rgb(250, 170, 73);
 }
