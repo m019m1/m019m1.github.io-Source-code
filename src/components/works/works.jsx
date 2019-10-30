@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react';
+import React, { Component } from 'react';
 import './works.css';
 
 const works =  [
@@ -46,7 +46,7 @@ class Works extends Component {
 					<ul className='nav__list navList'>
 						{works.map( ({title}, index) => (
 							<li key={index} className='navList__items navItems'>
-								<button className={`navItems__buttons ${index == currentIndex && 'navItems__buttons--active'}`} onClick={() => {this.setState({currentIndex: index});}}>{title}</button>
+								<button className={`navItems__buttons ${index === currentIndex && 'navItems__buttons--active'}`} onClick={() => {this.setState({currentIndex: index});}}>{title}</button>
 							</li>
 						))}
 					</ul>

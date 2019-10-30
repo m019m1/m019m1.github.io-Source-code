@@ -1,12 +1,13 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './error.css';
 
 const Error = () => {
 	return (
-		<Fragment>
+		<div className='error'>
 			<p>Oh no no no! You've broken that site! Congratulations!</p>
 			<p>Please, go	<NavLink to='/'> Home </NavLink> now!</p>
-		</Fragment>
+		</div>
 	)
 }
 export default Error;
