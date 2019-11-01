@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-brands-svg-icons": "^5.11.2",
+    "@fortawesome/free-regular-svg-icons": "^5.11.2",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.7",
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
     "react-codepen-embed": "^1.0.1",
@@ -30,6 +35,6 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-		]
+    ]
   }
 }

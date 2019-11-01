@@ -1,3 +1,42 @@
-.skills * {
+.skills {
   color: white;
+  margin-top: 20px;
+}
+
+.skills__list {
+  list-style-type: none;
+}
+
+.skill {
+  font-size: 1.6em;
+}
+
+.basicSkill {
+  display: inline-block;
+  width: 140px;
+  height: 2em;
+}
+
+.description {
+  animation: skills 1s linear;
+}
+
+@keyframes skills {
+  0%, 40% {
+    margin-left: 300px;
+    opacity: 0;
+  }
+  70%, 80%, 90%, 100% {
+    margin-left: 0px;
+  }
+  75% {
+    margin-left: 20px;
+    opacity: 1;
+  }
+  85% {
+    margin-left: 10px;
+  }
+  95% {
+    margin-left: 5px;
+  }
 }

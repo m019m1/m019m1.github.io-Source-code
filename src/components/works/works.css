@@ -1,3 +1,6 @@
+.gallery {
+	animation: appear2 1.5s;
+}
 .gallery__frame {
 	width: 1000px;
 	height: 700px;
@@ -8,7 +11,7 @@
 	width: 100px;
 	position: absolute;
 	height: 100%;
-	font-size: 3em;
+	font-size: 3.5em;
 	outline: none;
 	border: none;
 	border-radius: 60px 0px 0px 60px;
@@ -17,6 +20,9 @@
 }
 .frame__buttons:hover {
 	background: linear-gradient(to left, #555, #333);
+}
+.frame__buttons:active {
+	color: rgb(250, 170, 73);
 }
 .frame__buttons--prev {
 	left: 0px;
@@ -83,4 +89,12 @@
 }
 .navItems__buttons--active {
 	background-color: rgb(250, 170, 73);
+}
+@keyframes appear2 {
+	0%, 50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

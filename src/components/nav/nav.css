@@ -14,6 +14,9 @@ nav {
 }
 .navMenu a {
 	color: white;
+	text-decoration: none;
+	/* transform: scale(1.1); */
+
 }
 .navMenu a:hover, .navMenu a.active {
 	color: rgb(250, 170, 73);

@@ -7,19 +7,17 @@
 	border-radius: 5%;
 }
 .aboutMe {
-	display: flex;
-	flex-direction: column;
 	width: 47%;
 	text-align: justify;
 	text-indent: 1.5em;
 	line-height: 1.2em;
 	font-size: 1.6em;
 	justify-content: space-around;
-	padding-top: 15px;
+	padding-top: 30px;
 }
 .aboutMe__paragraph {
 	/* margin: 20px 0px 40px; */
-	margin: 15px;
+	margin-bottom: 25px;
 }
 
 .home {
@@ -29,8 +27,8 @@
 	animation: appear .5s cubic-bezier(.6, .9, .8, 1.2);
 }
 @keyframes appear {
-	0%, 50% {
-		transform: scale(0.8);
+	0%, 80% {
+		transform: scale(0.9);
 		opacity: 0;
 	}
 	100% {
