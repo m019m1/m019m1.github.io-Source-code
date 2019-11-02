@@ -24,10 +24,10 @@
 	width: 850px;
 	margin: auto;
 	margin-top: 50px;
-	animation: appear .5s cubic-bezier(.6, .9, .8, 1.2);
+	animation: appear 1s cubic-bezier(.6, .9, .8, 1.2);
 }
 @keyframes appear {
-	0%, 80% {
+	0%, 60% {
 		transform: scale(0.9);
 		opacity: 0;
 	}

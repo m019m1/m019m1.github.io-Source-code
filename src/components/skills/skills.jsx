@@ -1,6 +1,5 @@
 import React from 'react';
 import './skills.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const skills = [
 	{
@@ -23,25 +22,16 @@ const skills = [
 		basicSkill: 'The rest...',
 		description: 'REST API, git, SQL, npm, babel',
 	},
-
 ]
 
 const Skills = () => {
 
 	return (
 		<div className="skills">
-
-			<FontAwesomeIcon icon={['fab', 'html5']} />
-			<FontAwesomeIcon icon={['fab', 'css3-alt']} />
-			<FontAwesomeIcon icon={['fab', 'js-square']} />
-			<FontAwesomeIcon icon={['fab', 'react']} />
-
-
 			<ul className="skills__list">
 				{ skills.map( ({basicSkill, description}) => (
 						<li key={basicSkill} className='skill' >
 							<span className='basicSkill'>{basicSkill}</span>
-
 							<span className='description'>{description}</span>
 						</li>
 				 ))}
