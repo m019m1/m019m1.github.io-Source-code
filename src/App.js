@@ -4,7 +4,6 @@ import './App.css';
 import Nav from './components/nav/nav';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-// import { faEnvelope as regularEnvelope, } from '@fortawesome/free-regular-svg-icons';
 import { faEnvelope, faPhoneSquareAlt } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
@@ -15,7 +14,7 @@ library.add(
 
 const App = ({children}) => {
   return (
-    <div className="App">
+    <div className="app">
 			<Header/>
 			<Nav/>
 			{children}

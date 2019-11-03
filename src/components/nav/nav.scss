@@ -1,0 +1,25 @@
+.nav__menu {
+	width: 240px;
+	margin: .3em auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	list-style-type: none;
+	font-size: 2em;
+	// border: 1px solid #fff;
+
+	& a {
+		color: white;
+		text-decoration: none;
+	}
+	& a:hover, & a.active {
+		color: rgb(250, 170, 73);
+	}
+}
+
+@media screen and (min-width: 480px) {
+	.nav__menu {
+		width: 100%;
+		max-width: 600px;
+	}
+}

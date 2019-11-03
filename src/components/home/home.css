@@ -1,38 +1,59 @@
-.home * {
-	color: white;
-}
-.myPhoto {
-	width: 47%;
-	float: right;
-	border-radius: 5%;
-}
-.aboutMe {
-	width: 47%;
-	text-align: justify;
-	text-indent: 1.5em;
-	line-height: 1.2em;
-	font-size: 1.6em;
-	justify-content: space-around;
-	padding-top: 30px;
-}
-.aboutMe__paragraph {
-	/* margin: 20px 0px 40px; */
-	margin-bottom: 25px;
+.home {
+  margin: auto;
+  margin-top: 1rem;
+  animation: appear 1s cubic-bezier(0.6, 0.9, 0.8, 1.2);
 }
 
-.home {
-	width: 850px;
-	margin: auto;
-	margin-top: 50px;
-	animation: appear 1s cubic-bezier(.6, .9, .8, 1.2);
+.myPhoto, .aboutMe {
+  width: 92%;
+  max-width: 550px;
+  margin: auto;
 }
+
+.myPhoto {
+  display: block;
+  border-radius: 5%;
+}
+
+.aboutMe {
+  text-align: justify;
+  text-indent: 1.5em;
+  line-height: 1.2em;
+  font-size: 1.6em;
+  justify-content: space-around;
+  padding-top: 30px;
+}
+.aboutMe__paragraph {
+  color: white;
+  margin-bottom: 25px;
+}
+
 @keyframes appear {
-	0%, 60% {
-		transform: scale(0.9);
-		opacity: 0;
-	}
-	100% {
-		transform: scale(1);
-		opacity: 1;
-	}
+  0%, 60% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 900px) {
+  .myPhoto {
+    width: 47%;
+    float: right;
+  }
+
+  .aboutMe {
+    width: 47%;
+    margin: 0;
+    text-align: justify;
+    text-indent: 1.5em;
+    font-size: 1.6em;
+    padding-top: 20px;
+  }
+  .aboutMe__paragraph {
+    color: white;
+    margin-bottom: 25px;
+  }
 }

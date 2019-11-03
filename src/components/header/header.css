@@ -1,7 +1,5 @@
 .header {
-	width: 500px;
-	margin: auto;
-	/* border: 1px solid #000; */
-	text-align: center;
-	color: bisque;
+  margin: 0 auto;
+  text-align: center;
+  color: bisque;
 }

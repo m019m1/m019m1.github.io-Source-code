@@ -1,0 +1,62 @@
+$width: 100px;
+$height: 100px;
+$delay: 40ms;
+$anim: contactAppear .7s  backwards;
+
+.contacts * {
+	color: white;
+}
+.contacts {
+	// height: 100%;
+	height: 70vh;
+}
+.contacts__appeal {
+	font-size: 1.5em;
+	margin: 1em 0;
+}
+.contacts__list {
+	list-style-type: none;
+	position: relative;
+	// height: 600px;
+	height: 100%;
+}
+.contact {
+	display: inline-block;
+	width: $width;
+	height: $height;
+}
+#Github {
+	animation: $anim 0*$delay+.1s;
+}
+#Codepen {
+	animation: $anim 1*$delay+.1s;
+}
+#email {
+	animation: $anim 2*$delay+.1s;
+}
+#cell {
+	animation: $anim 3*$delay+.1s;
+}
+#Telegram {
+	animation: $anim 4*$delay+.1s;
+}
+#Skype {
+	animation: $anim 5*$delay+.1s;
+}
+#linkedIn {
+	animation: $anim 6*$delay+.1s;
+}
+#vk {
+	animation: $anim 7*$delay+.1s;
+}
+
+@keyframes contactAppear {
+	0%, 20%  {
+		transform: translateY(150px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
