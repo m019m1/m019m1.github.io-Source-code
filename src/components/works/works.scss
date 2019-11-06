@@ -1,0 +1,330 @@
+$viewportWidth: 92vw;
+$viewportHeight: 78vh;
+$butHeight: 10vh;
+// $maxWidth: 700px;
+// $maxHeight: 900px;
+$butWidth: 100%;
+
+.frame {
+	margin: (100vh - $viewportHeight - $butHeight * 2)/2 auto;
+	animation: appear2 1.5s;
+	&__buttons {
+		display: block;
+		width: $butWidth;
+		// max-width: $maxWidth;
+		height: $butHeight;
+		margin: auto;
+		font-size: 2.8em;
+		outline: none;
+		border: none;
+		border-radius: $butHeight*3/5 $butHeight*3/5 0px 0px;
+		color: rgba(255, 255, 255, 0.8);
+		line-height: 100%;
+		background: #555;
+			&:active {
+				color: rgb(250, 170, 73);
+			}
+			&--next {
+				transform: rotate(180deg);
+			}
+		}
+	&__viewport {
+		// max-width: $maxWidth;
+		height: $viewportHeight;
+		margin: auto;
+		overflow: hidden;
+	}
+	&__worksList {
+		list-style-type: none;
+		width: 10000px;
+		transition: .7s;
+		background: #555;
+		&__work {
+			display: inline-block;
+			width: $viewportWidth;
+			// max-width: $maxWidth;
+			margin: auto;
+			height: $viewportHeight;
+			.codepen {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+}
+
+.nav {
+	display: none;
+}
+
+@keyframes appear2 {
+	0%, 50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@media (orientation: landscape), (min-width: 1024px) and (orientation: landscape)/*, (min-width: 1000px) and (orientation: portrait)*/ {
+	$viewportWidth: 72vw;
+	$viewportHeight: 96vh;
+	$maxViewportHeight: 700px;
+	$butWidth: 10vw;
+	$butHeight: 100%;
+	$maxViewportWidth: 700px;
+	$butMaxWidth: 100px;
+	
+	.frame {
+		position: relative;
+		margin: (100vh - $viewportHeight)/2 auto;
+		max-height: $maxViewportHeight;
+		&__buttons {
+			// display: block;
+			position: absolute;
+			width: $butWidth;
+			max-width: $butMaxWidth;
+			height: $butHeight;
+			// margin: auto;
+			// font-size: 2.8em;
+			border-radius: 60% 0 0 60% / 10% 0 0 10%;
+			// line-height: 100%;
+			&--prev {
+				left: 0px;
+			}
+			&--next {
+				right: 0px;
+				top: 0px;
+			}
+		}
+		&__viewport {
+			width: $viewportWidth;
+			max-width: $maxViewportWidth;
+			height: $viewportHeight;
+			max-height: $maxViewportHeight;
+			// margin: auto;
+			// overflow: hidden;
+		}
+		&__worksList {
+			// list-style-type: none;
+			// width: 10000px;
+			// transition: .7s;
+			// background: #555;
+			&__work {
+				// display: inline-block;
+				width: $viewportWidth;
+				max-width: $maxViewportWidth;
+				// margin: auto;
+				height: $viewportHeight;
+				max-height: $maxViewportHeight;
+				// .codepen {
+				// 	width: 100%;
+				// 	height: 100%;
+				// }
+			}
+		}
+	}
+/*
+	$mainWidth: 900px;
+	$butWidth: 100px;
+	$viewportWidth: $mainWidth - $butWidth * 2;
+	$viewportHeight: $viewportWidth;
+
+	.frame {
+		position: relative;
+		&__buttons {
+			width: $butWidth;
+			position: absolute;
+			height: 100%;
+			font-size: 3.5em;
+			outline: none;
+			border: none;
+			border-radius: $butWidth*3/5 0px 0px $butWidth*3/5;
+			color: rgba(255, 255, 255, 0.8);
+			background: #555;
+				&:hover {
+					background: linear-gradient(to left, #555, #333);
+				}
+				&:active {
+					color: rgb(250, 170, 73);
+				}
+				&--prev {
+					left: 0px;
+				}
+				&--next {
+					transform: rotate(180deg);
+					right: 0px;
+					top: 0px;
+				}
+			}
+		&__viewport {
+			width: $viewportWidth;
+			height: $viewportHeight;
+			margin: auto;
+			overflow: hidden;
+		}
+		&__worksList {
+			list-style-type: none;
+			width: 10000px;
+			transition: .7s;
+			background: #555;
+			&__work {
+				width: $viewportWidth;
+				display: inline-block;
+				margin: auto;
+				height: $viewportHeight;
+				.codepen {
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+
+	}
+	*/
+}
+
+
+ @media (min-width: 1024px) and (orientation: landscape) and (min-height: 900px) /* and (orientation: landscape) */ {
+	.frame {
+		margin: 0 auto;
+	}
+	.nav {
+		display: block;
+		&__list {
+			// border: 1px solid #fff;
+																			// width: ($mainWidth + $viewportWidth)/2;
+			list-style-type: none;
+			margin: 1rem auto 0;
+			&__items {
+				display: inline-block;
+				width: 16%;
+				margin-right: 5%;
+				&:last-child {
+					margin-right: 0%;
+				}
+				&__buttons {
+					display: block;
+					width: 100%;
+					padding: 20px 0px;
+					border-radius: 10px;
+					border: none;
+					outline: none;
+					transition: .1s;
+					font-size: 1em;
+					&:hover, &--active {
+						transform: scale(1.1);
+					}
+					&--active {
+						background-color: rgb(250, 170, 73);
+					}
+				}
+			}
+		}
+	}
+} 
+
+
+
+
+/* $mainWidth: 900px;
+$butWidth: 100px;
+$viewportWidth: $mainWidth - $butWidth * 2;
+$viewportHeight: $viewportWidth;
+
+.gallery {
+	animation: appear2 1.5s;
+}
+.frame {
+	position: relative;
+	&__buttons {
+		width: $butWidth;
+		position: absolute;
+		height: 100%;
+		font-size: 3.5em;
+		outline: none;
+		border: none;
+		border-radius: $butWidth*3/5 0px 0px $butWidth*3/5;
+		color: rgba(255, 255, 255, 0.8);
+		background: #555;
+			&:hover {
+				background: linear-gradient(to left, #555, #333);
+			}
+			&:active {
+				color: rgb(250, 170, 73);
+			}
+			&--prev {
+				left: 0px;
+			}
+			&--next {
+				transform: rotate(180deg);
+				right: 0px;
+				top: 0px;
+			}
+		}
+	&__viewport {
+		width: $viewportWidth;
+		height: $viewportHeight;
+		margin: auto;
+		overflow: hidden;
+	}
+	&__worksList {
+		list-style-type: none;
+		width: 10000px;
+		transition: .7s;
+		background: #555;
+		&__work {
+			width: $viewportWidth;
+			display: inline-block;
+			margin: auto;
+			height: $viewportHeight;
+			.codepen {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+}
+
+.nav {
+	display: block;
+	&__list {
+		// border: 1px solid #fff;
+		width: ($mainWidth + $viewportWidth)/2;
+		list-style-type: none;
+		margin: 1rem auto 0;
+		&__items {
+			display: inline-block;
+			width: 16%;
+			margin-right: 5%;
+			&:last-child {
+				margin-right: 0%;
+			}
+			&__buttons {
+				display: block;
+				width: 100%;
+				padding: 20px 0px;
+				border-radius: 10px;
+				border: none;
+				outline: none;
+				transition: .1s;
+				font-size: 1em;
+				&:hover, &--active {
+					transform: scale(1.1);
+				}
+				&--active {
+					background-color: rgb(250, 170, 73);
+				}
+			}
+		}
+	}
+}
+@keyframes appear2 {
+	0%, 50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+} */

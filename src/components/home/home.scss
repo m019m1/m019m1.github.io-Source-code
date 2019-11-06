@@ -1,10 +1,12 @@
-.home {
+.home {	
+	width: 92vw;
+	max-width: 100%;
 	margin: auto;
-	margin-top: 1rem;
+	margin-top: .7rem;
 	animation: appear 1s cubic-bezier(.6, .9, .8, 1.2);
 }
 .myPhoto, .aboutMe {
-	width: 92%;
+	width: 100%;
 	max-width: 550px;
 	margin: auto;
 }
@@ -14,11 +16,15 @@
 }
 .aboutMe {
 	text-align: justify;
-	text-indent: 1.5em;
-	line-height: 1.2em;
-	font-size: 1.6em;
-	justify-content: space-around;
-	padding-top: 30px;
+	// text-indent: 1.5rem;
+	// line-height: 1.5rem;
+	// font-size: 1.2rem;
+	// justify-content: space-around;
+	text-indent: 2.1rem;
+	font-size: 1.6rem;
+	padding-top: 1.6rem;
+	// padding-top: 30px;
+
 	&__paragraph {
 		color: white;
 		margin-bottom: 25px;
@@ -35,21 +41,22 @@
 		opacity: 1;
 	}
 }
-@media screen and (min-width: 900px) {
+
+@media (min-width: 1024px) and (orientation: landscape) {
 	.myPhoto {
-		width: 47%;
+		width: 49%;
 		float: right;
 	}
 	.aboutMe {
 		width: 47%;
 		margin: 0;
 		text-align: justify;
-		text-indent: 1.5em;
-		font-size: 1.6em;
-		padding-top: 20px;
+		// text-indent: 2.1rem;
+		font-size: 1.5rem;
+		// padding-top: 1.4rem;
 		&__paragraph {
 			color: white;
-			margin-bottom: 25px;
+			// margin-bottom: 1.3em;
 		}
 	}
 }

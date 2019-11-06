@@ -4,6 +4,7 @@
 
 .contacts {
   height: 70vh;
+  text-align: center;
 }
 
 .contacts__appeal {
@@ -14,11 +15,14 @@
 .contacts__list {
   list-style-type: none;
   position: relative;
+  width: 90%;
+  margin: auto;
+  border: 1px solid #fff;
   height: 100%;
 }
 
 .contact {
-  display: inline-block;
+  float: left;
   width: 100px;
   height: 100px;
 }

@@ -12,7 +12,6 @@ const works =  [
 class Works extends Component {
 	state = {
 		currentIndex: 0,
-		isLoaded: false,
 	}
 
 	shift = num => {
@@ -24,29 +23,32 @@ class Works extends Component {
 	render () {
 
 		const {currentIndex} = this.state;
-		const style =  {transform: `translateX(${-currentIndex*800}px)`};
+		const width = document.documentElement.clientWidth;
+		const height = document.documentElement.clientHeight;
+		const frameWidth = (width > height || width > 1025) ? Math.min(700, width*0.72) : width*0.92;
+		const style =  {transform: `translateX(${-currentIndex*frameWidth}px)`};
 		
 		return (
 			<div className='gallery'>
-				<section className='gallery__frame frame'>
+				<section className='frame'>
 					<button className="frame__buttons frame__buttons--prev" onClick={this.shift.bind(this, -1)}>&lArr;</button>
-						<div className='frame__viewport'>
-							<ul className='frame__worksList worksList' style={style}>
-								{works.map( ({hash, userName, title}) => (
-									<li key={hash} className='worksList__work'>
-										<iframe className='frame__codepen' src={`https://codepen.io/${userName}/embed/preview/${hash}`} frameborder="0" title={title} />
-									</li>
-								))}
-							</ul>
-						</div>
-					{<button className="frame__buttons frame__buttons--next" onClick={this.shift.bind(this, 1)}>&lArr;</button>}
+					<div className='frame__viewport'>
+						<ul className='frame__worksList' style={style}>
+							{works.map( ({hash, userName, title}) => (
+								<li key={hash} className='frame__worksList__work'>
+									<iframe className='codepen' src={`https://codepen.io/${userName}/embed/preview/${hash}`} frameborder="0" title={title} />
+								</li>
+							))}
+						</ul>
+					</div>
+					<button className="frame__buttons frame__buttons--next" onClick={this.shift.bind(this, 1)}>&lArr;</button>
 				</section>
 
-				<nav className="gallery__nav nav">
-					<ul className='nav__list navList'>
+				<nav className="nav">
+					<ul className='nav__list'>
 						{works.map( ({title}, index) => (
-							<li key={index} className='navList__items navItems'>
-								<button className={`navItems__buttons ${index === currentIndex && 'navItems__buttons--active'}`} onClick={() => {this.setState({currentIndex: index});}}>{title}</button>
+							<li key={index} className='nav__list__items'>
+								<button className={`nav__list__items__buttons ${index === currentIndex && 'nav__list__items__buttons--active'}`} onClick={() => {this.setState({currentIndex: index});}}>{title}</button>
 							</li>
 						))}
 					</ul>
