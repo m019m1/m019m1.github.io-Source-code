@@ -1,37 +1,89 @@
-.skills {
-	color: white;
-	margin-top: 20px;
-}
 .skills__list {
-		list-style-type: none;
-	}
-.skill {
-	font-size: 1.6em;
+	margin-top: 2%;
+	list-style-type: none;
+	// border: 1px solid #f99;
+	display: inline-block;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
 }
 .basicSkill {
-	display: inline-block;
-	width: 140px;
-	height: 2em;
+	// color: rgb(235, 209, 127);
+	color: rgb(132, 250, 138);
+	font-size: 1.5em;
+	display: block;
+	margin-top: 1em;
 }
 .description {
-	animation: skills 1s linear;
+	color: white;
+	position: relative;
+	font-size: 1.2em;
+	animation: skills 1.2s cubic-bezier(.5, 0, 1, .9);
 }
 @keyframes skills{
-	0%, 40% {
-		margin-left: 300px;
+	0%, 20% {
+		left: 50%;
+		opacity: 0;
+	}
+	30% {
 		opacity: 0;
 	}
 	70%, 80%, 90%, 100% {
-		margin-left: 0px;
+		left: 0;
 	}
 	75% {
-		margin-left: 20px;
+		left: 4%;
 		opacity: 1;
 	}
 	85% {
-		margin-left: 10px;
+		left: 2%;
 	}
 	95% {
-		margin-left: 5px;
+		left: 1%;
+	}
+}
+
+@media (min-width: 400px) and (max-width: 480px) {
+	.basicSkill {
+		display: inline-block;
+		font-size: 1.3em;
+		width: 100px;
+	}
+}
+@media (min-width: 480px) and (max-width: 550px) {
+	.basicSkill {
+		display: inline-block;
+		width: 120px;
+	}
+}
+@media (min-width: 550px) and (max-width: 610px) {
+	.basicSkill {
+		display: inline-block;
+		font-size: 1.7em;
+		width: 150px;
+	}
+	.description {
+		font-size: 1.4em;
+	}
+}
+
+@media (min-width: 610px) and (max-width: 1024px) {
+	.basicSkill {
+		display: inline-block;
+		font-size: 2em;
+		width: 170px;
+	}
+	.description {
+		font-size: 1.5em;
+	}
+}
+@media (min-width: 1024px) {
+	.basicSkill {
+		display: inline-block;
+		font-size: 1.8em;
+		width: 200px;
+	}
+	.description {
+		font-size: 1.5em;
 	}
 }

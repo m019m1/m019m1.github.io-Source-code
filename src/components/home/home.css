@@ -3,7 +3,7 @@
   max-width: 100%;
   margin: auto;
   margin-top: .7rem;
-  animation: appear 1s cubic-bezier(0.6, 0.9, 0.8, 1.2);
+  animation: appear 0.8s cubic-bezier(0.6, 0.9, 0.8, 1.2);
 }
 
 .myPhoto, .aboutMe {

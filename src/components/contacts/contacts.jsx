@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import './contacts.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -55,19 +55,18 @@ const contacts = [
 
 const Contacts = () => {
 	return (
-		<div className="contacts">
-			<p className="contacts__appeal">Feel free to contact me!</p>
+		<Fragment>
+			<p className="contacts__appeal">Feel free to contact me!)</p>
 			<ul className="contacts__list">
 				{contacts.map( ( {title, href, target, icon} ) => (
 					<li key={title} title={title} className='contact' id={title}>
-						<a href={href} target={target}>
-							<FontAwesomeIcon icon={icon} size='3x'  fixedWidth /* border */ pull="left" />
+						<a href={href} target={target} className='contact__link'>
+							<FontAwesomeIcon icon={icon} /*size='6x'*/ fixedWidth  /* border */ pull="left" className="icon"/>
 						</a>
 					</li>
 				))}
 			</ul>
-			
-		</div>
+		</Fragment>
 	)
 }
 export default Contacts;

@@ -161,11 +161,11 @@
   }
   .nav__list__items {
     display: inline-block;
-    width: 16%;
-    margin-right: 5%;
+    width: 12%;
+    margin-right: 6%;
   }
-  .nav__list__items:last-child {
-    margin-right: 0%;
+  .nav__list__items:first-child {
+    margin-left: 8%;
   }
   .nav__list__items__buttons {
     display: block;

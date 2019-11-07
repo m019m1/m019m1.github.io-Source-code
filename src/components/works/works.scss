@@ -198,10 +198,10 @@ $butWidth: 100%;
 			margin: 1rem auto 0;
 			&__items {
 				display: inline-block;
-				width: 16%;
-				margin-right: 5%;
-				&:last-child {
-					margin-right: 0%;
+				width: 12%;
+				margin-right: 6%;
+				&:first-child {
+					margin-left: 8%;
 				}
 				&__buttons {
 					display: block;

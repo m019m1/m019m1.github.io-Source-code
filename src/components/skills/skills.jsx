@@ -8,11 +8,11 @@ const skills = [
 	},
 	{
 		basicSkill: 'CSS3',
-		description: 'Sass/SCSS, BEM, adaptive, mobile/desktop-first',
+		description: 'Sass/SCSS, BEM, adaptive, flex/grid',
 	},
 	{
 		basicSkill: 'JavaScript',
-		description: 'Good knowledge, ES6, AJAX, jQuery',
+		description: 'Good knowledge. ES6, AJAX, jQuery',
 	},
 	{
 		basicSkill: 'React.js',

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import './works.css';
 
 const works =  [
@@ -29,7 +29,7 @@ class Works extends Component {
 		const style =  {transform: `translateX(${-currentIndex*frameWidth}px)`};
 		
 		return (
-			<div className='gallery'>
+			<Fragment>
 				<section className='frame'>
 					<button className="frame__buttons frame__buttons--prev" onClick={this.shift.bind(this, -1)}>&lArr;</button>
 					<div className='frame__viewport'>
@@ -53,7 +53,7 @@ class Works extends Component {
 						))}
 					</ul>
 				</nav>
-			</div>
+			</Fragment>
 		)
 	}
 }

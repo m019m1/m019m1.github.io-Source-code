@@ -28,3 +28,10 @@ ReactDOM.render((
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+/* window.onresize = function () {
+	let width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  let height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+	this.document.body.style.width = width;
+	this.document.body.style.height = height;
+}; */
