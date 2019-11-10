@@ -15,11 +15,14 @@
   line-height: 100%;
   background: #555;
 }
+.frame__buttons__text {
+  transform: translateY(-5%);
+}
 .frame__buttons:active {
   color: #faaa49;
 }
 .frame__buttons--next {
-  transform: rotate(180deg);
+  transform: scale(-1);
 }
 .frame__viewport {
   height: 78vh;
@@ -47,7 +50,7 @@
   display: none;
 }
 
-@keyframes appear2 {
+@keyframes workAppear {
   0%, 50% {
     opacity: 0;
   }
@@ -58,6 +61,7 @@
 @media (orientation: landscape), (min-width: 1024px) and (orientation: landscape) {
   .frame {
     position: relative;
+    animation: workAppear 1.5s;
     margin: 2vh auto;
     max-height: 700px;
   }
@@ -67,6 +71,9 @@
     max-width: 100px;
     height: 100%;
     border-radius: 60% 0 0 60% / 10% 0 0 10%;
+  }
+  .frame__buttons__text {
+    transform: translateY(-5%);
   }
   .frame__buttons--prev {
     left: 0px;
@@ -87,77 +94,19 @@
     height: 96vh;
     max-height: 700px;
   }
-
-  /*
-  	$mainWidth: 900px;
-  	$butWidth: 100px;
-  	$viewportWidth: $mainWidth - $butWidth * 2;
-  	$viewportHeight: $viewportWidth;
-  
-  	.frame {
-  		position: relative;
-  		&__buttons {
-  			width: $butWidth;
-  			position: absolute;
-  			height: 100%;
-  			font-size: 3.5em;
-  			outline: none;
-  			border: none;
-  			border-radius: $butWidth*3/5 0px 0px $butWidth*3/5;
-  			color: rgba(255, 255, 255, 0.8);
-  			background: #555;
-  				&:hover {
-  					background: linear-gradient(to left, #555, #333);
-  				}
-  				&:active {
-  					color: rgb(250, 170, 73);
-  				}
-  				&--prev {
-  					left: 0px;
-  				}
-  				&--next {
-  					transform: rotate(180deg);
-  					right: 0px;
-  					top: 0px;
-  				}
-  			}
-  		&__viewport {
-  			width: $viewportWidth;
-  			height: $viewportHeight;
-  			margin: auto;
-  			overflow: hidden;
-  		}
-  		&__worksList {
-  			list-style-type: none;
-  			width: 10000px;
-  			transition: .7s;
-  			background: #555;
-  			&__work {
-  				width: $viewportWidth;
-  				display: inline-block;
-  				margin: auto;
-  				height: $viewportHeight;
-  				.codepen {
-  					width: 100%;
-  					height: 100%;
-  				}
-  			}
-  		}
-  
-  	}
-  	*/
 }
-@media (min-width: 1024px) and (orientation: landscape) and (min-height: 900px) {
+@media (min-width: 1024px) and (orientation: landscape) and (min-height: 930px) {
   .frame {
     margin: 0 auto;
   }
 
   .nav {
     display: block;
+    animation: workAppear 1.5s;
   }
   .nav__list {
     list-style-type: none;
-    margin: 1rem auto 0;
+    margin: 1rem auto;
   }
   .nav__list__items {
     display: inline-block;
@@ -184,104 +133,3 @@
     background-color: #faaa49;
   }
 }
-/* $mainWidth: 900px;
-$butWidth: 100px;
-$viewportWidth: $mainWidth - $butWidth * 2;
-$viewportHeight: $viewportWidth;
-
-.gallery {
-	animation: appear2 1.5s;
-}
-.frame {
-	position: relative;
-	&__buttons {
-		width: $butWidth;
-		position: absolute;
-		height: 100%;
-		font-size: 3.5em;
-		outline: none;
-		border: none;
-		border-radius: $butWidth*3/5 0px 0px $butWidth*3/5;
-		color: rgba(255, 255, 255, 0.8);
-		background: #555;
-			&:hover {
-				background: linear-gradient(to left, #555, #333);
-			}
-			&:active {
-				color: rgb(250, 170, 73);
-			}
-			&--prev {
-				left: 0px;
-			}
-			&--next {
-				transform: rotate(180deg);
-				right: 0px;
-				top: 0px;
-			}
-		}
-	&__viewport {
-		width: $viewportWidth;
-		height: $viewportHeight;
-		margin: auto;
-		overflow: hidden;
-	}
-	&__worksList {
-		list-style-type: none;
-		width: 10000px;
-		transition: .7s;
-		background: #555;
-		&__work {
-			width: $viewportWidth;
-			display: inline-block;
-			margin: auto;
-			height: $viewportHeight;
-			.codepen {
-				width: 100%;
-				height: 100%;
-			}
-		}
-	}
-
-}
-
-.nav {
-	display: block;
-	&__list {
-		// border: 1px solid #fff;
-		width: ($mainWidth + $viewportWidth)/2;
-		list-style-type: none;
-		margin: 1rem auto 0;
-		&__items {
-			display: inline-block;
-			width: 16%;
-			margin-right: 5%;
-			&:last-child {
-				margin-right: 0%;
-			}
-			&__buttons {
-				display: block;
-				width: 100%;
-				padding: 20px 0px;
-				border-radius: 10px;
-				border: none;
-				outline: none;
-				transition: .1s;
-				font-size: 1em;
-				&:hover, &--active {
-					transform: scale(1.1);
-				}
-				&--active {
-					background-color: rgb(250, 170, 73);
-				}
-			}
-		}
-	}
-}
-@keyframes appear2 {
-	0%, 50% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-} */

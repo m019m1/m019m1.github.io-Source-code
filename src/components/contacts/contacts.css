@@ -75,11 +75,13 @@
   .contacts__list {
     width: 90%;
     grid-template-columns: repeat(4, 1fr);
+    min-height: 250px;
   }
 }
 @media (min-width: 900px) {
   .contacts__list {
     width: 100%;
     grid-template-columns: repeat(8, 1fr);
+    min-height: 250px;
   }
 }
