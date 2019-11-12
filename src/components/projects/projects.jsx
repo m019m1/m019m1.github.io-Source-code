@@ -44,7 +44,7 @@ class Projects extends Component {
 	render () {
 
 		const {currentIndex, width, height} = this.state;
-		const frameWidth = (width > height || width > 1025) ? Math.min(700, width*0.72) : width*0.92
+		const frameWidth = (width > height) ? Math.min(700, width*0.72) : width*0.92
 		const style = {transform: `translateX(${-currentIndex*frameWidth}px)`};
 		
 		return (
