@@ -1,0 +1,37 @@
+.nav {
+	display: none;
+}
+@media (min-width: 1024px) and (orientation: landscape) and (min-height: 940px) {
+	.nav {
+		display: block;
+		animation: projectAppear 1.5s;
+		&__list {
+			list-style-type: none;
+			margin: 1rem auto;
+			&__items {
+				display: inline-block;
+				width: 12%;
+				margin-right: 6%;
+				&:first-child {
+					margin-left: 8%;
+				}
+				&__buttons {
+					display: block;
+					width: 100%;
+					padding: 20px 0px;
+					border-radius: 10px;
+					border: none;
+					outline: none;
+					transition: .1s;
+					font-size: 1em;
+					&:hover, &--active {
+						transform: scale(1.1);
+					}
+					&--active {
+						background-color: rgb(250, 170, 73);
+					}
+				}
+			}
+		}
+	}
+}

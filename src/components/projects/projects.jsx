@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-
+import OptionsNav from '../optionsNav/optionsNav.jsx';
 import './projects.css';
 
 const projects =  [
@@ -11,13 +11,17 @@ const projects =  [
 ]
 
 class Projects extends Component {
+	// take window.inner*** instead of document.documentElement.client***
+	// cause of correct behaviour while resizing in dev-mode
 	state = {
 		currentIndex: 0,
+		width: window.innerWidth,
+		height: window.innerHeight,
 	}
 
 	changeDimension = () => { this.setState({
-			width: document.documentElement.clientWidth,
-			height: document.documentElement.clientHeight,
+			width: window.innerWidth,
+			height: window.innerHeight,
 		});
 	}
 	componentDidMount() {
@@ -32,11 +36,14 @@ class Projects extends Component {
 			currentIndex: (currentIndex + num < 0 ? projects.length - 1 : currentIndex + num > projects.length - 1 ? 0 : currentIndex + num)
 		}));
 	}
+	setOption = (index) => { 
+		this.setState({currentIndex: index});
+	}
 
 	render () {
 
 		const {currentIndex, width, height} = this.state;
-		const frameWidth = (width > height	|| width > 1025) ? Math.min(700, width*0.72) : width*0.92
+		const frameWidth = (width > height || width > 1025) ? Math.min(700, width*0.72) : width*0.92
 		const style = {transform: `translateX(${-currentIndex*frameWidth}px)`};
 		
 		return (
@@ -55,15 +62,8 @@ class Projects extends Component {
 					<button className="frame__buttons frame__buttons--next" onClick={this.shift.bind(this, 1)}><p className="frame__buttons__text">&lArr;</p></button>
 				</section>
 
-				<nav className="nav">
-					<ul className='nav__list'>
-						{projects.map( ({title}, index) => (
-							<li key={index} className='nav__list__items'>
-								<button className={`nav__list__items__buttons ${index === currentIndex && 'nav__list__items__buttons--active'}`} onClick={() => {this.setState({currentIndex: index});}}>{title}</button>
-							</li>
-						))}
-					</ul>
-				</nav>
+				<OptionsNav listOfOptions={projects} currentIndex={currentIndex} btnsClickHandle={this.setOption}/>
+				
 			</Fragment>
 		)
 	}

@@ -1,0 +1,38 @@
+.nav {
+  display: none;
+}
+
+@media (min-width: 1024px) and (orientation: landscape) and (min-height: 940px) {
+  .nav {
+    display: block;
+    animation: projectAppear 1.5s;
+  }
+  .nav__list {
+    list-style-type: none;
+    margin: 1rem auto;
+  }
+  .nav__list__items {
+    display: inline-block;
+    width: 12%;
+    margin-right: 6%;
+  }
+  .nav__list__items:first-child {
+    margin-left: 8%;
+  }
+  .nav__list__items__buttons {
+    display: block;
+    width: 100%;
+    padding: 20px 0px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    transition: .1s;
+    font-size: 1em;
+  }
+  .nav__list__items__buttons:hover, .nav__list__items__buttons--active {
+    transform: scale(1.1);
+  }
+  .nav__list__items__buttons--active {
+    background-color: #faaa49;
+  }
+}
