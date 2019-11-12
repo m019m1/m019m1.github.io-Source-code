@@ -12,11 +12,18 @@ library.add(
 	faPhoneSquareAlt
 )
 
+const links = [
+	{name: 'Home', href: '/'},
+	{name: 'Projects', href: '/projects'},
+	{name: 'Skills', href: '/skills'},
+	{name: 'Contacts', href: '/contacts'},
+];
+
 const App = ({children}) => {
   return (
     <div className="app">
 			<Header/>
-			<Nav/>
+			<Nav links={links}/>
 			{children}
     </div>
   );

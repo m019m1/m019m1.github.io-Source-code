@@ -39,12 +39,12 @@ $butWidth: 100%;
 		margin: auto;
 		overflow: hidden;
 	}
-	&__worksList {
+	&__projectsList {
 		list-style-type: none;
 		width: 10000px;
 		transition: .7s;
 		background: #555;
-		&__work {
+		&__project {
 			display: inline-block;
 			width: $viewportWidth;
 			// max-width: $maxWidth;
@@ -62,7 +62,7 @@ $butWidth: 100%;
 	display: none;
 }
 
-@keyframes workAppear {
+@keyframes projectAppear {
 	0%, 50% {
 		opacity: 0;
 	}
@@ -82,7 +82,7 @@ $butWidth: 100%;
 	
 	.frame {
 		position: relative;
-		animation: workAppear 1.5s;
+		animation: projectAppear 1.5s;
 		margin: (100vh - $viewportHeight)/2 auto;
 		max-height: $maxViewportHeight;
 		&__buttons {
@@ -116,12 +116,12 @@ $butWidth: 100%;
 			// margin: auto;
 			// overflow: hidden;
 		}
-		&__worksList {
+		&__projectsList {
 			// list-style-type: none;
 			// width: 10000px;
 			// transition: .7s;
 			// background: #555;
-			&__work {
+			&__project {
 				// display: inline-block;
 				width: $viewportWidth;
 				max-width: $maxViewportWidth;
@@ -142,7 +142,7 @@ $butWidth: 100%;
 	}
 	.nav {
 		display: block;
-		animation: workAppear 1.5s;
+		animation: projectAppear 1.5s;
 		// border: 1px solid #fff;
 		&__list {
 																			// width: ($mainWidth + $viewportWidth)/2;

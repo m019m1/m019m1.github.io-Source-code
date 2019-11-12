@@ -1,16 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './nav.css';
 
-const Nav = () => {
-
-	const links = [
-		{name: 'Home', href: '/'},
-		{name: 'Works', href: '/works'},
-		{name: 'Skills', href: '/skills'},
-		{name: 'Contacts', href: '/contacts'}
-	];
-
+const Nav = ({links}) => {
 	return (
 		<nav>
 			<ul className='nav__menu'>
@@ -25,5 +18,10 @@ const Nav = () => {
 		</nav>
 	)
 }
-
+Nav.propTypes = {
+	links: PropTypes.array,
+};
+Nav.defaultProps = {
+	links: []
+}
 export default Nav;

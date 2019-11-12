@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { HashRouter, Switch, Route } from 'react-router-dom';
 import Home from './components/home/home';
-import Works from './components/works/works';
+import Projects from './components/projects/projects';
 import Skills from './components/skills/skills';
 import Contacts from './components/contacts/contacts';
 import Error from './components/error/error';
@@ -15,7 +15,7 @@ ReactDOM.render((
 		<App>
 			<Switch>
 				<Route exact path='/' component={Home} />
-				<Route path='/works' component={Works} />
+				<Route path='/projects' component={Projects} />
 				<Route path='/skills' component={Skills} />
 				<Route path='/contacts' component={Contacts} />
 				<Route path='*' component={Error} />
@@ -28,10 +28,3 @@ ReactDOM.render((
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
-
-/* window.onresize = function () {
-	let width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-  let height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-	this.document.body.style.width = width;
-	this.document.body.style.height = height;
-}; */

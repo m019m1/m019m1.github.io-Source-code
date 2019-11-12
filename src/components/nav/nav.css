@@ -1,11 +1,11 @@
 .nav__menu {
   width: 80%;
+  list-style-type: none;
   padding: .3rem 0;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  list-style-type: none;
 }
 .nav__menu__item {
   flex-basis: 50%;
@@ -29,12 +29,3 @@
     flex-basis: 0;
   }
 }
-/* @media screen and (min-width: 481px) {
-	.nav__menu {
-		width: 88vw;
-		max-width: 600px;
-		&__item {
-			flex-basis: 0;
-		}
-	}
-} */

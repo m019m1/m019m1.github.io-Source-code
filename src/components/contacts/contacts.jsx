@@ -51,17 +51,17 @@ const contacts = [
 		target: '_blank',
 		icon: ['fab', 'vk'],
 	},
-]
+] 
 
 const Contacts = () => {
 	return (
 		<Fragment>
-			<p className="contacts__appeal">Feel free to contact me!)</p>
+			<p className="contacts__appeal">Feel free to contact me!</p>
 			<ul className="contacts__list">
 				{contacts.map( ( {title, href, target, icon} ) => (
 					<li key={title} title={title} className='contact' id={title}>
 						<a href={href} target={target} className='contact__link'>
-							<FontAwesomeIcon icon={icon} /*size='6x'*/ fixedWidth  /* border */ pull="left" className="icon"/>
+							<FontAwesomeIcon icon={icon} fixedWidth pull="left" className="icon"/>
 						</a>
 					</li>
 				))}

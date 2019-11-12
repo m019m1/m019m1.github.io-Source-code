@@ -29,19 +29,19 @@
   margin: auto;
   overflow: hidden;
 }
-.frame__worksList {
+.frame__projectsList {
   list-style-type: none;
   width: 10000px;
   transition: .7s;
   background: #555;
 }
-.frame__worksList__work {
+.frame__projectsList__project {
   display: inline-block;
   width: 92vw;
   margin: auto;
   height: 78vh;
 }
-.frame__worksList__work .codepen {
+.frame__projectsList__project .codepen {
   width: 100%;
   height: 100%;
 }
@@ -50,7 +50,7 @@
   display: none;
 }
 
-@keyframes workAppear {
+@keyframes projectAppear {
   0%, 50% {
     opacity: 0;
   }
@@ -61,7 +61,7 @@
 @media (orientation: landscape), (min-width: 1024px) and (orientation: landscape) {
   .frame {
     position: relative;
-    animation: workAppear 1.5s;
+    animation: projectAppear 1.5s;
     margin: 2vh auto;
     max-height: 700px;
   }
@@ -88,7 +88,7 @@
     height: 96vh;
     max-height: 700px;
   }
-  .frame__worksList__work {
+  .frame__projectsList__project {
     width: 72vw;
     max-width: 700px;
     height: 96vh;
@@ -102,7 +102,7 @@
 
   .nav {
     display: block;
-    animation: workAppear 1.5s;
+    animation: projectAppear 1.5s;
   }
   .nav__list {
     list-style-type: none;

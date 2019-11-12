@@ -29,8 +29,8 @@ const Skills = () => {
 	return (
 		<div className="skills">
 			<ul className="skills__list">
-				{ skills.map( ({basicSkill, description}) => (
-						<li key={basicSkill} className='skill' >
+				{ skills.map( ({ basicSkill, description }) => (
+						<li key={basicSkill} className='skill'>
 							<span className='basicSkill'>{basicSkill}</span>
 							<span className='description'>{description}</span>
 						</li>
