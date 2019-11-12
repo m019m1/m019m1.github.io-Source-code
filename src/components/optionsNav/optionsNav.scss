@@ -1,10 +1,11 @@
 .nav {
 	display: none;
 }
+
 @media (min-width: 1024px) and (orientation: landscape) and (min-height: 940px) {
 	.nav {
 		display: block;
-		animation: projectAppear 1.5s;
+		animation: navAppear 1.5s;
 		&__list {
 			list-style-type: none;
 			margin: 1rem auto;
@@ -32,6 +33,15 @@
 					}
 				}
 			}
+		}
+	}
+
+	@keyframes navAppear {
+		0%, 50% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
 		}
 	}
 }

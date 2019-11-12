@@ -1,0 +1,136 @@
+$viewportWidth: 92vw;
+$viewportHeight: 78vh;
+$butHeight: 10vh;
+
+.frame {
+	margin: (100vh - $viewportHeight - $butHeight*2)/2 auto;
+	animation: appear2 1.5s;
+	&__buttons {
+		display: block;
+		width: 100%;
+		height: $butHeight;
+		margin: auto;
+		font-size: 2.8em;
+		outline: none;
+		border: none;
+		border-radius: $butHeight*3/5 $butHeight*3/5 0px 0px;
+		color: rgba(255, 255, 255, 0.8);
+		line-height: 100%;
+		background: #555;
+		&__text {
+			// width: 1rem;
+			// height: 1rem;
+			transform: translateY(-5%);
+		}
+			&:active {
+				color: rgb(250, 170, 73);
+			}
+			&--next {
+				transform: scale(-1);
+			}
+		}
+	&__viewport {
+		// max-width: $maxWidth;
+		height: $viewportHeight;
+		margin: auto;
+		overflow: hidden;
+	}
+	&__projectsList {
+		list-style-type: none;
+		width: 10000px;
+		transition: .7s;
+		background: #555;
+		&__project {
+			display: inline-block;
+			width: $viewportWidth;
+			// max-width: $maxWidth;
+			margin: auto;
+			height: $viewportHeight;
+			.codepen {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+}
+
+@keyframes frameAppear {
+	0%, 50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@media (orientation: landscape), (min-width: 1024px) and (orientation: landscape)/*, (min-width: 1000px) and (orientation: portrait)*/ {
+	$viewportWidth: 72vw;
+	$viewportHeight: 96vh;
+	$maxViewportHeight: 700px;
+	$butWidth: 10vw;
+	$butHeight: 100%;
+	$maxViewportWidth: 700px;
+	$butMaxWidth: 100px;
+	
+	.frame {
+		position: relative;
+		animation: frameAppear 1.5s;
+		margin: 1vh auto;
+		// margin: auto;
+		max-height: $maxViewportHeight;
+		&__buttons {
+			// display: block;
+			position: absolute;
+			width: $butWidth;
+			max-width: $butMaxWidth;
+			height: $butHeight;
+			// margin: auto;
+			// font-size: 2.8em;
+			border-radius: 60% 0 0 60% / 10% 0 0 10%;
+			// line-height: 100%;
+			&__text {
+				// width: 1rem;
+				// height: 1rem;
+				transform: translateY(-5%);
+			}
+			&--prev {
+				left: 0px;
+			}
+			&--next {
+				right: 0px;
+				top: 0px;
+			}
+		}
+		&__viewport {
+			width: $viewportWidth;
+			max-width: $maxViewportWidth;
+			height: $viewportHeight;
+			max-height: $maxViewportHeight;
+			// margin: auto;
+			// overflow: hidden;
+		}
+		&__projectsList {
+			// list-style-type: none;
+			// width: 10000px;
+			// transition: .7s;
+			// background: #555;
+			&__project {
+				// display: inline-block;
+				width: $viewportWidth;
+				max-width: $maxViewportWidth;
+				// margin: auto;
+				height: $viewportHeight;
+				max-height: $maxViewportHeight;
+				// .codepen {
+				// 	width: 100%;
+				// 	height: 100%;
+				// }
+			}
+		}
+	}
+}
+@media (min-width: 1024px) and (orientation: landscape) and (min-height: 930px) {
+	.frame {
+		margin: 0 auto;
+	}
+}

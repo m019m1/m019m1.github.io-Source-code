@@ -5,7 +5,7 @@
 @media (min-width: 1024px) and (orientation: landscape) and (min-height: 940px) {
   .nav {
     display: block;
-    animation: projectAppear 1.5s;
+    animation: navAppear 1.5s;
   }
   .nav__list {
     list-style-type: none;
@@ -34,5 +34,14 @@
   }
   .nav__list__items__buttons--active {
     background-color: #faaa49;
+  }
+
+  @keyframes navAppear {
+    0%, 50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }

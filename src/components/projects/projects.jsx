@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import CodepenFrame from '../codepenFrame/codepenFrame.jsx';
 import OptionsNav from '../optionsNav/optionsNav.jsx';
 import './projects.css';
 
@@ -36,7 +37,7 @@ class Projects extends Component {
 			currentIndex: (currentIndex + num < 0 ? projects.length - 1 : currentIndex + num > projects.length - 1 ? 0 : currentIndex + num)
 		}));
 	}
-	setOption = (index) => { 
+	setIndex = index => { 
 		this.setState({currentIndex: index});
 	}
 
@@ -48,22 +49,8 @@ class Projects extends Component {
 		
 		return (
 			<Fragment>
-				<section className='frame'>
-					<button className="frame__buttons frame__buttons--prev" onClick={this.shift.bind(this, -1)}><p className="frame__buttons__text">&lArr;</p></button>
-					<div className='frame__viewport'>
-						<ul className='frame__projectsList' style={style}>
-							{projects.map( ({hash, userName, title}) => (
-								<li key={hash} className='frame__projectsList__project'>
-									<iframe className='codepen' src={`https://codepen.io/${userName}/embed/preview/${hash}`} frameBorder="0" title={title} />
-								</li>
-							))}
-						</ul>
-					</div>
-					<button className="frame__buttons frame__buttons--next" onClick={this.shift.bind(this, 1)}><p className="frame__buttons__text">&lArr;</p></button>
-				</section>
-
-				<OptionsNav listOfOptions={projects} currentIndex={currentIndex} btnsClickHandle={this.setOption}/>
-				
+				<CodepenFrame listOfProjects={projects} btnsClickHandle={this.shift} style={style} />
+				<OptionsNav listOfOptions={projects} btnsClickHandle={this.setIndex} currentIndex={currentIndex} />
 			</Fragment>
 		)
 	}

@@ -1,9 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './optionsNav.css';
 
 const OptionsNav = ( { listOfOptions, currentIndex, btnsClickHandle } ) => {
-	
-
 	return (
 		<nav className="nav">
 		<ul className='nav__list'>
@@ -16,5 +15,15 @@ const OptionsNav = ( { listOfOptions, currentIndex, btnsClickHandle } ) => {
 	</nav>
 	)
 }
+OptionsNav.propTypes = {
+	listOfOptions: PropTypes.array.isRequired,
+	currentIndex: PropTypes.number,
+	btnsClickHandle: PropTypes.func,
+}
+OptionsNav.defaultProps = {
+	currentIndex: 0,
+	btnsClickHandle: () => {},
+}
+
 
 export default OptionsNav;
