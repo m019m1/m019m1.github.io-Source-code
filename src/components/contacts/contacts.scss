@@ -2,13 +2,13 @@ $delay: 40ms;
 $anim: contactAppear .7s  backwards;
 
 .contacts__appeal {
-	color: white;
+	color: rgb(255, 255, 255);
 	font-size: 1.8em;
 	margin: 1em 0;
 	text-align: center;
 }
 .contacts__list * {
-	color: white;
+	color: rgb(255, 255, 255);
 }
 .contacts__list {
 	list-style-type: none;

@@ -31,8 +31,8 @@ const Skills = () => {
 			<ul className="skills__list">
 				{ skills.map( ({ basicSkill, description }) => (
 						<li key={basicSkill} className='skill'>
-							<span className='basicSkill'>{basicSkill}</span>
-							<span className='description'>{description}</span>
+							<span className='skill__basic'>{basicSkill}</span>
+							<span className='skill__description'>{description}</span>
 						</li>
 				 ))}
 			</ul>

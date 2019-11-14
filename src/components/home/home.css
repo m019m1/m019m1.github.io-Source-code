@@ -18,14 +18,14 @@
 }
 
 .aboutMe {
-  text-align: justify;
-  text-indent: 2.1rem;
-  font-size: 1.6rem;
-  padding-top: 1.6rem;
+  padding-top: 1.8rem;
 }
 .aboutMe__paragraph {
+  text-align: justify;
+  text-indent: 2.1rem;
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
   color: white;
-  margin-bottom: 25px;
 }
 
 @keyframes appear {
@@ -40,17 +40,20 @@
 }
 @media (min-width: 1024px) and (orientation: landscape) {
   .myPhoto {
-    width: 49%;
+    width: 48%;
     float: right;
   }
 
   .aboutMe {
-    width: 47%;
-    margin: 0;
-    text-align: justify;
-    font-size: 1.5rem;
+    width: 48%;
+    margin-right: 52%;
+    height: 550px;
   }
   .aboutMe__paragraph {
-    color: white;
+    font-size: 1.48rem;
+    margin-bottom: 1.9rem;
+  }
+  .aboutMe__paragraph:last-child {
+    margin-bottom: 0;
   }
 }

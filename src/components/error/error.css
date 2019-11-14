@@ -1,9 +1,9 @@
 .error {
-	margin-top: 20px;
-	color: white;
-	font-size: 1.5rem;
+  margin-top: 20px;
+  color: white;
+  font-size: 1.5rem;
 }
-a {
-	color: rgb(247, 179, 101);
-	text-decoration: none;
+.error a {
+  color: #f7b365;
+  text-decoration: none;
 }

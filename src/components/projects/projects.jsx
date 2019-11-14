@@ -1,14 +1,13 @@
 import React, { Component, Fragment } from 'react';
 import CodepenFrame from '../codepenFrame/codepenFrame.jsx';
 import OptionsNav from '../optionsNav/optionsNav.jsx';
-import './projects.css';
 
 const projects =  [
-	{hash: 'VwZqowp', userName: 'm019m1', title: 'Exchange'},
-	{hash: 'eYOVWdv', userName: 'm019m1', title: 'Todo'},
-	{hash: 'WNeRoje', userName: 'm019m1', title: 'Table'},
-	{hash: 'XWrabPr', userName: 'm019m1', title: 'Loupe'},
-	{hash: 'WNeppRM', userName: 'm019m1', title: 'Cube'},
+	{hash: 'VwZqowp', userName: 'm019m1', title: 'Exchange', description: 'Exchange rates & charts', stack: 'HTML, CSS: SCSS, flex/grid, JS: ES6, chart.js library, fetch(AJAX), async/await promises'},
+	{hash: 'eYOVWdv', userName: 'm019m1', title: 'Todo', description: 'Mobile-friendly ToDo List', stack: 'HTML, CSS: SCSS, BEM, flex/grid, JS: ES6, localStorage, JSON, also there is jQuery version'},
+	{hash: 'WNeRoje', userName: 'm019m1', title: 'Table', description: 'Mobile-friendly Table with draggable columns and sortable rows', stack: 'HTML, CSS, JS: ES6, DOM manipulation, event handling, event delegation'},
+	{hash: 'XWrabPr', userName: 'm019m1', title: 'Loupe', description: 'Mobile-friendly Loupe', stack: 'HTML, CSS, JS: ES6, DOM manipulation, event handling'},
+	{hash: 'WNeppRM', userName: 'm019m1', title: 'Cube', description: 'Spinning cube', stack: 'HTML, CSS: 3D animation'},
 ]
 
 class Projects extends Component {
@@ -44,7 +43,7 @@ class Projects extends Component {
 	render () {
 
 		const {currentIndex, width, height} = this.state;
-		const frameWidth = (width > height) ? Math.min(700, width*0.72) : width*0.92
+		const frameWidth = (width > height) ? Math.min(width*0.72, 700) : Math.max(width*0.92, 300);
 		const style = {transform: `translateX(${-currentIndex*frameWidth}px)`};
 		
 		return (
