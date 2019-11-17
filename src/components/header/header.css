@@ -5,4 +5,29 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+}
+.header__language {
+  position: absolute;
+  top: 5.5rem;
+  right: .1rem;
+  width: 3rem;
+  height: 2.2rem;
+  background: url("../../img/flag-icon-british.png") center/cover;
+  cursor: pointer;
+  border-radius: 20%;
+}
+
+#lang {
+  display: none;
+}
+#lang:checked + label {
+  background: url("../../img/flag-icon-russian.png") center/cover;
+}
+
+@media (min-width: 400px) {
+  .header__language {
+    top: 2.5rem;
+    right: 1rem;
+  }
 }

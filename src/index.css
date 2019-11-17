@@ -11,10 +11,11 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	background: url('./img/background.jpg') no-repeat center/cover;
 }
-html, body {
-	min-width: 100%;
-	min-height: 100%;
+html, body, #root {
+	min-width: 100vw;
+	min-height: 100vh;
 	overflow-x: hidden;
+	overflow-y: visible;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

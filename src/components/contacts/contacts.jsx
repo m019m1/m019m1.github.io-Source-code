@@ -1,6 +1,7 @@
 import React, {Fragment} from 'react';
 import './contacts.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { connect } from 'react-redux';
 
 const contacts = [
 	{
@@ -53,10 +54,10 @@ const contacts = [
 	},
 ] 
 
-const Contacts = () => {
+const Contacts = ({language}) => {
 	return (
 		<Fragment>
-			<p className="contacts__appeal">Feel free to contact me!</p>
+			{ language == 'EN' ? <p className="contacts__appeal">Feel free to contact me!</p> : <p className="contacts__appeal">Обращайтесь!</p>}
 			<ul className="contacts__list">
 				{contacts.map( ( {title, href, target, icon} ) => (
 					<li key={title} title={title} className='contact' id={title}>
@@ -69,4 +70,7 @@ const Contacts = () => {
 		</Fragment>
 	)
 }
-export default Contacts;
+
+export default connect( ({ language }) => ({
+  language,
+}) )(Contacts);

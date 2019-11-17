@@ -25,7 +25,6 @@
   text-indent: 2.1rem;
   font-size: 1.4rem;
   margin-bottom: 1.2rem;
-  color: white;
 }
 
 @keyframes appear {
@@ -55,5 +54,10 @@
   }
   .aboutMe__paragraph:last-child {
     margin-bottom: 0;
+  }
+  .aboutMe__paragraph--rus {
+    font-size: 1.36rem;
+    width: 90%;
+    margin-left: 10%;
   }
 }

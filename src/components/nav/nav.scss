@@ -13,13 +13,13 @@
 	& a {
 		color: rgb(255, 255, 255);
 		text-decoration: none;
-		font-size: 1.8rem;
+		font-size: 1.6rem;
 	}
 	& a:hover, & a.active {
 		color: rgb(250, 170, 73);
 	}
 }
-@media screen and (min-width: 361px) {
+@media screen and (min-width: 400px) {
 	.nav__menu {
 		width: 100%;
 		max-width: 600px;

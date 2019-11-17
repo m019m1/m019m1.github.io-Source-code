@@ -9,19 +9,23 @@ import Projects from './components/projects/projects';
 import Skills from './components/skills/skills';
 import Contacts from './components/contacts/contacts';
 import Error from './components/error/error';
+import { Provider } from 'react-redux';
+import store from './store';
 
 ReactDOM.render((
-	<HashRouter >
-		<App>
-			<Switch>
-				<Route exact path='/' component={Home} />
-				<Route path='/projects' component={Projects} />
-				<Route path='/skills' component={Skills} />
-				<Route path='/contacts' component={Contacts} />
-				<Route path='*' component={Error} />
-			</Switch>
-		</App>
-	</HashRouter >
+	<Provider store={store}>
+		<HashRouter >
+			<App>
+				<Switch>
+					<Route exact path='/' component={Home} />
+					<Route path='/projects' component={Projects} />
+					<Route path='/skills' component={Skills} />
+					<Route path='/contacts' component={Contacts} />
+					<Route path='*' component={Error} />
+				</Switch>
+			</App>
+		</HashRouter >
+	</Provider>
 	), document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

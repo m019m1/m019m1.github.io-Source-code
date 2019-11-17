@@ -14,13 +14,12 @@
   margin-top: 1em;
 }
 .skill__description {
-  color: white;
   position: relative;
   font-size: 1.2em;
-  animation: skills 1.2s cubic-bezier(0.5, 0, 1, 0.9);
+  animation: skillsAppear 1.2s cubic-bezier(0.5, 0, 1, 0.9);
 }
 
-@keyframes skills {
+@keyframes skillsAppear {
   0%, 20% {
     left: 50%;
     opacity: 0;
@@ -46,7 +45,7 @@
   .skill__basic {
     display: inline-block;
     font-size: 1.3em;
-    width: 100px;
+    width: 85px;
   }
 }
 @media (min-width: 480px) and (max-width: 550px) {
@@ -59,7 +58,7 @@
   .skill__basic {
     display: inline-block;
     font-size: 1.7em;
-    width: 150px;
+    width: 134px;
   }
 
   .skill__description {
@@ -70,7 +69,7 @@
   .skill__basic {
     display: inline-block;
     font-size: 2em;
-    width: 170px;
+    width: 160px;
   }
 
   .skill__description {
