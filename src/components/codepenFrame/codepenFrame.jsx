@@ -19,7 +19,7 @@ const CodepenFrame = ( { listOfProjects, style, btnsClickHandle, language } ) =>
 								<iframe className='codepen' src={`https://codepen.io/${userName}/embed/preview/${hash}`} frameBorder="0" title={title} />
 								<div className="description" id={hash} onClick={ onDescriptionClick.bind(null, hash) } >
 									<div>
-										<h3 className='description__header'>{language == 'EN' ? description : descriptionRus}{'\n'}{'\n'}</h3>
+										<h3 className='description__header'>{language === 'EN' ? description : descriptionRus}{'\n'}{'\n'}</h3>
 										<p className='description__stack'>&lt;{stack}&nbsp;&#47;&gt;</p>
 									</div>
 								</div>
@@ -36,10 +36,12 @@ CodepenFrame.propTypes = {
 	listOfProjects: PropTypes.array.isRequired,
 	style: PropTypes.object,
 	btnsClickHandle: PropTypes.func,
+	language: PropTypes.string,
 }
 CodepenFrame.defaultProps = {
 	style: null,
 	btnsClickHandle: () => {},
+	language: 'EN',
 }
 
 export default CodepenFrame;

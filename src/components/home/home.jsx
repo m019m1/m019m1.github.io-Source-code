@@ -1,7 +1,8 @@
 import React from 'react';
-import './home.css';
 import myPhoto from '../../img/me.jpg';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import './home.css';
 
 const aboutMe = [
 	{
@@ -27,17 +28,24 @@ const aboutMeRus = [
 ]
 
 const Home = ({ language }) => {
-	const about = language == 'EN' ? aboutMe : aboutMeRus;
+	const about = language === 'EN' ? aboutMe : aboutMeRus;
 	return (
 		<div className='home'>
 			<img className='myPhoto' src={myPhoto} alt='myPhoto' title='share this portfolio ;-)' />
 			<article className='aboutMe'>
-				{ about.map( ({ text }) => (
-						<p className={`aboutMe__paragraph ${ language == 'RUS' && 'aboutMe__paragraph--rus' }` }>{text}</p>
+				{ about.map( ({ text }, index) => (
+						<p key={index} className={`aboutMe__paragraph ${ language === 'RUS' && 'aboutMe__paragraph--rus' }` }>{text}</p>
 				 ))}
 			</article>
 		</div>
 	)
+}
+
+Home.propTypes = {
+	language: PropTypes.string,
+}
+Home.defaultProps = {
+	language: 'EN',
 }
 
 export default connect( ({ language }) => ({

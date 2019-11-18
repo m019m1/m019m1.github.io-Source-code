@@ -8,7 +8,7 @@ const OptionsNav = ( { listOfOptions, currentIndex, btnsClickHandle, language } 
 		<ul className='nav__list'>
 			{listOfOptions.map( ({title, titleRus}, index) => (
 				<li key={index} className='nav__list__items'>
-					<button className={`nav__list__items__buttons ${index === currentIndex && 'nav__list__items__buttons--active'}`} onClick={btnsClickHandle.bind(null, index)}>{language == 'EN' ? title : titleRus}</button>
+					<button className={`nav__list__items__buttons ${index === currentIndex && 'nav__list__items__buttons--active'}`} onClick={btnsClickHandle.bind(null, index)}>{language === 'EN' ? title : titleRus}</button>
 				</li>
 			))}
 		</ul>
@@ -19,10 +19,12 @@ OptionsNav.propTypes = {
 	listOfOptions: PropTypes.array.isRequired,
 	currentIndex: PropTypes.number,
 	btnsClickHandle: PropTypes.func,
+	language: PropTypes.string,
 }
 OptionsNav.defaultProps = {
 	currentIndex: 0,
 	btnsClickHandle: () => {},
+	language: 'EN',
 }
 
 

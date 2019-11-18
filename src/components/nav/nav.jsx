@@ -22,6 +22,6 @@ Nav.propTypes = {
 	links: PropTypes.array,
 };
 Nav.defaultProps = {
-	links: []
+	links: [],
 }
 export default Nav;

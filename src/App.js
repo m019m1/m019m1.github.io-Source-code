@@ -7,6 +7,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faPhoneSquareAlt } from '@fortawesome/free-solid-svg-icons'
 import { connect } from 'react-redux';
 import { toggleLanguage } from './actions/actionCreator';
+import PropTypes from 'prop-types';
 
 library.add(
 	fab,
@@ -28,10 +29,19 @@ const linksRus = [
 ];
 
 class App extends Component {
-	
+
+	static propTypes = {
+		language: PropTypes.string,
+		toggleLanguage: PropTypes.func,
+	}
+	static defaultProps = {
+		language: 'EN',
+		toggleLanguage: () => {},
+	}
+
 	toggleLanguage = () => {
 		const { language, toggleLanguage } = this.props;
-		language == 'EN' ? toggleLanguage('RUS') : toggleLanguage('EN');
+		language === 'EN' ? toggleLanguage('RUS') : toggleLanguage('EN');
 	}
 
 	render() {
@@ -40,12 +50,11 @@ class App extends Component {
 		return (
 			<div className="app">
 				<Header language={language} toggleLanguage={this.toggleLanguage} />
-				<Nav links={ language == 'EN' ? links : linksRus}/>
-				{children} {/* all the ways to passing props to children don't work, when there is Redux together with Router :=(		 */}
+				<Nav links={ language === 'EN' ? links : linksRus}/>
+				{children} {/* all the ways to passing props to children I've tried so far don't work, when there is Redux together with Router :=(		 */}
 			</div>
 		);
 	}
-
 }
 
 export default connect( ({ language }) => ({

@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import CodepenFrame from '../codepenFrame/codepenFrame.jsx';
 import OptionsNav from '../optionsNav/optionsNav.jsx';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 const projects =  [
 	{hash: 'VwZqowp', userName: 'm019m1', title: 'Exchange',  titleRus: 'Обмен', description: "Exchange rates' dynamics", descriptionRus: 'Динамика обменных курсов', stack: 'HTML, CSS: SCSS, flex/grid, JS: ES6, chart.js library, fetch(AJAX), promises, async/await'},
@@ -18,6 +19,13 @@ class Projects extends Component {
 		currentIndex: 0,
 		width: window.innerWidth,
 		height: window.innerHeight,
+	}
+
+	static propTypes = {
+		language: PropTypes.string,
+	}
+	static defaultProps = {
+		language: 'EN',
 	}
 
 	changeDimension = () => { this.setState({

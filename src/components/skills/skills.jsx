@@ -1,6 +1,7 @@
 import React from 'react';
-import './skills.css';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import './skills.css';
 
 const skills = [
 	{
@@ -42,13 +43,20 @@ const Skills = ({language}) => {
 			<ul className="skills__list">
 				{ skills.map( ({ basic, basicRus, description, descriptionRus }) => (
 						<li key={basic} className='skill'>
-							<span className='skill__basic'>{ language == 'EN' ? basic : basicRus}</span>
-							<span className='skill__description'>{ language == 'EN' ? description : descriptionRus}</span>
+							<span className='skill__basic'>{ language === 'EN' ? basic : basicRus}</span>
+							<span className='skill__description'>{ language === 'EN' ? description : descriptionRus}</span>
 						</li>
 				 ))}
 			</ul>
 		</div>
 	)
+}
+
+Skills.propTypes = {
+	language: PropTypes.string,
+}
+Skills.defaultProps = {
+	language: 'EN',
 }
 
 export default connect( ({ language }) => ({

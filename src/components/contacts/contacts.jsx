@@ -1,7 +1,8 @@
 import React, {Fragment} from 'react';
-import './contacts.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import './contacts.css';
 
 const contacts = [
 	{
@@ -57,7 +58,7 @@ const contacts = [
 const Contacts = ({language}) => {
 	return (
 		<Fragment>
-			{ language == 'EN' ? <p className="contacts__appeal">Feel free to contact me!</p> : <p className="contacts__appeal">Обращайтесь!</p>}
+			{ language === 'EN' ? <p className="contacts__appeal">Feel free to contact me!</p> : <p className="contacts__appeal">Обращайтесь!</p>}
 			<ul className="contacts__list">
 				{contacts.map( ( {title, href, target, icon} ) => (
 					<li key={title} title={title} className='contact' id={title}>
@@ -69,6 +70,13 @@ const Contacts = ({language}) => {
 			</ul>
 		</Fragment>
 	)
+}
+
+Contacts.propTypes = {
+	language: PropTypes.string,
+}
+Contacts.defaultProps = {
+	language: 'EN',
 }
 
 export default connect( ({ language }) => ({
