@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { HashRouter, Switch, Route } from 'react-router-dom';
@@ -11,10 +10,11 @@ import Contacts from './components/contacts/contacts';
 import Error from './components/error/error';
 import { Provider } from 'react-redux';
 import store from './store';
+import './index.css';
 
 ReactDOM.render((
 	<Provider store={store}>
-		<HashRouter >
+		<HashRouter>
 			<App>
 				<Switch>
 					<Route exact path='/' component={Home} />
@@ -24,7 +24,7 @@ ReactDOM.render((
 					<Route path='*' component={Error} />
 				</Switch>
 			</App>
-		</HashRouter >
+		</HashRouter>
 	</Provider>
 	), document.getElementById('root'));
 

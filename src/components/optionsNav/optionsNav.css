@@ -1,25 +1,25 @@
-.nav {
+.options {
   display: none;
 }
 
 @media (min-width: 1024px) and (orientation: landscape) and (min-height: 920px) {
-  .nav {
+  .options {
     display: block;
     animation: navAppear 1.5s;
   }
-  .nav__list {
+  .options__list {
     list-style-type: none;
     margin: 1rem auto;
   }
-  .nav__list__items {
+  .options__list__items {
     display: inline-block;
     width: 12%;
     margin-right: 6%;
   }
-  .nav__list__items:first-child {
+  .options__list__items:first-child {
     margin-left: 8%;
   }
-  .nav__list__items__buttons {
+  .options__list__items__buttons {
     display: block;
     width: 100%;
     padding: 20px 0px;
@@ -29,10 +29,10 @@
     transition: .1s;
     font-size: 1em;
   }
-  .nav__list__items__buttons:hover, .nav__list__items__buttons--active {
+  .options__list__items__buttons:hover, .options__list__items__buttons--active {
     transform: scale(1.1);
   }
-  .nav__list__items__buttons--active {
+  .options__list__items__buttons--active {
     background-color: #faaa49;
   }
 

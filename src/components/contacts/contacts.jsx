@@ -43,7 +43,7 @@ const contacts = [
 	},
 	{
 		title: 'linkedIn',
-		href: 'https://www.linkedin.com/in/yaroslav-polyanskiy-01a802a4/',
+		href: 'https://www.linkedin.com/in/yaroslav-polyanskiy/',
 		target: '_blank',
 		icon: ['fab', 'linkedin'],
 	},

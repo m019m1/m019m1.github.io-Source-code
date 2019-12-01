@@ -4,11 +4,11 @@ import './optionsNav.css';
 
 const OptionsNav = ( { listOfOptions, currentIndex, btnsClickHandle, language } ) => {
 	return (
-		<nav className="nav">
-		<ul className='nav__list'>
+		<nav className="options">
+		<ul className='options__list'>
 			{listOfOptions.map( ({title, titleRus}, index) => (
-				<li key={index} className='nav__list__items'>
-					<button className={`nav__list__items__buttons ${index === currentIndex && 'nav__list__items__buttons--active'}`} onClick={btnsClickHandle.bind(null, index)}>{language === 'EN' ? title : titleRus}</button>
+				<li key={index} className='options__list__items'>
+					<button className={`options__list__items__buttons ${index === currentIndex && 'options__list__items__buttons--active'}`} onClick={btnsClickHandle.bind(null, index)}>{language === 'EN' ? title : titleRus}</button>
 				</li>
 			))}
 		</ul>

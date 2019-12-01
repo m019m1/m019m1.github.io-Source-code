@@ -30,14 +30,14 @@ const aboutMeRus = [
 const Home = ({ language }) => {
 	const about = language === 'EN' ? aboutMe : aboutMeRus;
 	return (
-		<div className='home'>
+		<main className='home'>
 			<img className='myPhoto' src={myPhoto} alt='myPhoto' title='share this portfolio ;-)' />
 			<article className='aboutMe'>
 				{ about.map( ({ text }, index) => (
 						<p key={index} className={`aboutMe__paragraph ${ language === 'RUS' && 'aboutMe__paragraph--rus' }` }>{text}</p>
 				 ))}
 			</article>
-		</div>
+		</main>
 	)
 }
 

@@ -39,7 +39,7 @@ const skills = [
 const Skills = ({language}) => {
 
 	return (
-		<div className="skills">
+		<main className="skills">
 			<ul className="skills__list">
 				{ skills.map( ({ basic, basicRus, description, descriptionRus }) => (
 						<li key={basic} className='skill'>
@@ -48,7 +48,7 @@ const Skills = ({language}) => {
 						</li>
 				 ))}
 			</ul>
-		</div>
+		</main>
 	)
 }
 

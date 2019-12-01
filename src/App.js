@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Header from './components/header/header';
-import './App.css';
 import Nav from './components/nav/nav';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
@@ -8,6 +7,7 @@ import { faEnvelope, faPhoneSquareAlt } from '@fortawesome/free-solid-svg-icons'
 import { connect } from 'react-redux';
 import { toggleLanguage } from './actions/actionCreator';
 import PropTypes from 'prop-types';
+import './App.css';
 
 library.add(
 	fab,
